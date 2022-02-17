@@ -6,59 +6,37 @@
   </div>
 </div>
 
+<div class="row">
+  <% @movie.all.each do |movie| %>
+    <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+      <div class="row">
+        <div class="card" style="width: 18rem;">
+          <h5 class="card-title"> <%= movie.title %> </h5>
+          <img class="card-img-top" src="https://source.unsplash.com/random/150x150" alt="Card image cap">
+          <p class="card-text"><%= movie.overview %></p>
+      </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 <%#
 <div class="row">
-  <div class="row">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
   </div>
-
-  <div class="row">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
+  </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
+  </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
+  </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
+  </div>
+  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
+    <h1>test</h1>
   </div>
 </div> %>
