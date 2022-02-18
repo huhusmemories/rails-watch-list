@@ -1,6 +1,6 @@
 <%= simple_form_for [@list, @bookmark] do |f|%>
-  <%= f.input :comment %>
   <%= f.association :movie %>
+  <%= f.input :comment %>
   <%# Need a movie_id %>
   <%= f.submit class:"btn btn-primary" %>
   <%= link_to "Back", list_path(@list.id) ,class:"btn btn-primary" %>
