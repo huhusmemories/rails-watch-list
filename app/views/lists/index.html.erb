@@ -1,9 +1,20 @@
-<h1>List Index HTML.ERB</h1>
-<%= link_to "Create a list", new_list_path, class:"btn btn-primary" %>
-<% @lists.each do |list|%>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1533523705247-88786d3e9242?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80);">
+  <div class="container">
+    <h1>Movie night!</h1>
+    <p>Add movies to watch it later</p>
+    <a class="btn btn-primary" href="#">Create a watchlist</a>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h1>List Index HTML.ERB</h1>
+  <%= link_to "Create a list", new_list_path, class:"btn btn-primary" %>
+  <% @lists.each do |list|%>
   <ul>
     <%= list.name %>
     <%= link_to "View List", list_path(list) %>
   </ul>
-
-<% end %>
+  <% end %>
+</div>
