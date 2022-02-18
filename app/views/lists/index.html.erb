@@ -1,0 +1,4 @@
+<h1>List Index HTML.ERB</h1>
+<% @lists.each do |list|%>
+  <%= link_to list.name, list_path(list) %>
+<% end %>
