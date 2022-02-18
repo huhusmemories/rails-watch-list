@@ -2,7 +2,17 @@
   <div>
     <%= @list.name %>
   </div>
+  <%# Iterate through the array @list.movies %>
+  <% @list.movies.each do |movie| %>
+    <%= movie.title %>
+    <%= movie.overview %>
+    <img src="<%=movie.poster_url %>" alt="">
+  <% end %>
+  <% @list.bookmarks.each do |bookmark| %>
+    <%= bookmark.comment %>
+  <% end %>
   <div>
+    <%= link_to "Add bookmark", new_list_bookmark_path(@list.id) ,class:"btn btn-primary" %>
     <%= link_to "Back", lists_path ,class:"btn btn-primary" %>
   </div>
 </div>
