@@ -11,7 +11,7 @@
     <div class="co-12 col-sm-6 col-md-4" style="border:solid">
       <div class="row">
         <div class="card" style="width: 18rem;">
-          <h5 class="card-title"> <%= movie.title %> </h5>
+          <h5 class="card-title"> <%= link_to movie.title, movie_path(movie) %> </h5>
           <img class="card-img-top" src="https://source.unsplash.com/random/150x150" alt="Card image cap">
           <p class="card-text"><%= movie.overview %></p>
       </div>
@@ -19,24 +19,3 @@
     </div>
   <% end %>
 </div>
-<%#
-<div class="row">
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-  <div class="co-12 col-sm-6 col-md-4" style="border:solid">
-    <h1>test</h1>
-  </div>
-</div> %>
