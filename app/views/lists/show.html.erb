@@ -1,23 +1,27 @@
-<div class="row row-cards">
-  <div>
-    <%= @list.name %>
-  </div>
-
-  <%# Iterate through the array %>
-  <%# Iterate through bookmarks and then bookmark.movie %>
-  <% @list.bookmarks.each do |bookmark| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <img class="card-img-top" src="<%=bookmark.movie.poster_url %>" alt="Card image cap">
-        <h5 class="card-title"><%= bookmark.movie.title %></h5>
-        <p class="card-text"><%= bookmark.movie.overview %></p>
-        <p><%= bookmark.comment %></p>
-      <%= link_to "Delete movie", bookmark_path(bookmark.id), method: :delete, data: { confirm: "Are you sure?" } %>
-      </div>
+<div class="container">
+  <div class="row row-cards">
+    <div>
+      <%= @list.name %>
     </div>
-  <% end %>
-  <div>
-    <%= link_to "Add bookmark", new_list_bookmark_path(@list.id) ,class:"btn btn-primary" %>
-    <%= link_to "Back", lists_path ,class:"btn btn-primary" %>
+
+    <%# Iterate through the array %>
+    <%# Iterate through bookmarks and then bookmark.movie %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <img class="card-img-top" src="<%=bookmark.movie.poster_url %>" alt="Card image cap">
+          <h5 class="card-title"><%= bookmark.movie.title %></h5>
+          <p class="card-text"><%= bookmark.movie.overview %></p>
+          <p><%= bookmark.comment %></p>
+        </div>
+        <div>
+        <%= link_to "Delete movie", bookmark_path(bookmark.id),class:"btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    <% end %>
+    <div>
+      <%= link_to "Add bookmark", new_list_bookmark_path(@list.id) ,class:"btn btn-primary" %>
+      <%= link_to "Back", lists_path ,class:"btn btn-primary" %>
+    </div>
   </div>
 </div>
